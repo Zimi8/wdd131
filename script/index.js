@@ -13,6 +13,6 @@ function setLastModified() {
         lastModifiedParagraph.textContent = `Last Modification: ${document.lastModified}`;
     }
 }
-
+//sets
 setCurrentYear();
 setLastModified();
