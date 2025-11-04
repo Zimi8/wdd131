@@ -3,10 +3,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>test for github pages</title>
+    <!-- Google Fonts Link for a custom font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="styles/index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet">
+    <script src="script/index.js" defer></script>
+    <title>WDD 131 – Dynamic Web Fundamentals  Ezequiel Jimenez</title>
+    <meta name="description" content="WDD 131  Dynamic Web Fundamentals – Ezequiel Jimenez. Home page, about me, and web development resources.">
+    <meta name="author" content=" Ezequiel Jimenez">
+    
+
+    
 </head>
 <body>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, officia omnis! Nihil molestias ipsa voluptatem
-         accusamus laborum nisi ullam consectetur suscipit, eius vel blanditiis possimus aliquam? Impedit eveniet sequi accusantium?</p>
+    <header>
+        <span id="course-title">WDD 131 – Dynamic Web Fundamentals – Ezequiel Jimenez</span>
+        <nav>
+            <a href="https://www.linkedin.com/" target="_blank">LinkedIn</a>
+            <a href="https://byupw.instructure.com/" target="_blank">Canvas</a>
+            <a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/1-ne/3?lang=eng&id=p7#p7" target="_blank">Scripture</a>
+            <a href="#">Final Project</a>
+        </nav>
+    </header>
+    
+    <main>
+        <h1> Ezequiel Jimenez</h1>
+
+        <section class="card about-me">
+            <h2>About Me</h2>
+            <div class="content-wrapper">
+                <div class="text-content">
+                    <p>My name is Ezequiel Jimenez. I was born in Argentina and live with my wife in Lanús, Buenos Aires. I am currently working as a Customer & It support at Atentus SA. I want to I love to learn new things.</p>
+                    
+                    <h3>Buenos Aires, Argentina</h3>
+                    <div class="flag-section">
+                        <!-- Placeholder Image URL for the flag since local files are not available here -->
+                        <img src="images/flag.jpg" alt="Official Flag of Madagascar" loading="lazy" width="150" height="100">
+                        <p class="caption">Official Flag of Argentina</p>
+                    </div>
+                    <p>Buenos Aires is the capital and largest city of Argentina and is located on the western shore of the Río de la Plata. It is a cultural hub that is home to distinctive art, music, and cuisine, of which the Tango dance and Asado barbecue are iconic symbols. The city is best known for its European-style architecture, vibrant neighborhoods, and passionate football culture.</p>
+                </div>
+                <!-- Placeholder Image URL for the profile picture since local files are not available here -->
+                <img src="images/me.jpg" alt="Profile picture of me, Ezequiel Jimenez" loading="lazy" class="profile-photo" width="150" height="200">
+            </div>
+        </section>
+
+        <section class="card resources">
+            <h2>Web Dev Resources</h2>
+            <ul>
+                <li><a href="https://dev.to/" target="_blank">Dev.to Community</a></li>
+                <li><a href="https://developer.mozilla.org/en-US/" target="_blank">Smashing Magazine</a></li>
+                <li><a href="https://csstricks.com/" target="_blank">CSS Tricks</a></li>
+                <li><a href="https://www.w3schools.com/" target="_blank">W3 Schools</a></li>
+                <li><a href="https://www.udemy.com/" target="_blank">Udemy</a></li>
+                
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>
+            &copy;<span id="currentyear"></span>  Ezequiel Jimenez - Argentina
+        </p>
+        <p id="lastModified"></p>
+    </footer>
+    
+
 </body>
 </html>
