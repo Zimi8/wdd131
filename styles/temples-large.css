@@ -1,0 +1,62 @@
+/*
+I wtant this 3 breakpoints: 650px, 850px, 1200px
+*/
+
+/* BREAKPOINT 1: Start in 2-Column Grid and 850px Max-Width (min-width: 750px) */
+@media (min-width: 650px) {
+    main {
+        max-width: 850px; /
+    }
+
+    /* Album Grid:  columns two */
+    .album-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* BREAKPOINT 2: Desktop Menu and 3-Column Grid (min-width: 850px) */
+@media (min-width: 850px) {
+    header {
+        padding: 1rem 3rem;
+    }
+    
+    /* Hide the hamburger icon */
+    .menu-icon {
+        display: none; 
+    }
+
+    /* Display the navigation links as a flex row */
+    .nav-links {
+        display: flex; 
+        position: static; /* Remove absolute positioning */
+        width: auto;
+        background-color: transparent;
+    }
+    
+    .nav-links li {
+        text-align: center;
+    }
+
+    .nav-links a {
+        border: none;
+        padding: 0.5rem 1rem;
+        color: var(--secondary-light);
+    }
+
+    .nav-links a:hover {
+        background-color: var(--hover-accent);
+        border-radius: 4px;
+    }
+
+    /* Album Grid: Three columns */
+    .album-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* BREAKPOINT 3: Final Max-Width Adjustment (min-width: 1200px) */
+@media (min-width: 1200px) {
+    main {
+        max-width: 1200px; /* Final max-width */
+    }
+}

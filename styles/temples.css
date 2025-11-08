@@ -1,0 +1,153 @@
+/* --- Color Palette and Variables --- */
+:root {
+    --primary-dark: #3E4F65; /* Dark Blue-Gray */
+    --secondary-light: #F5F5DC; /* Creamy White */
+    --hover-accent: #5F758C; /* Medium Blue-Gray */
+    --text-dark: #333333; /* Dark Gray for main text */
+    --font-main: 'Elms Sans', sans-serif;
+}
+
+/* --- Base & Mobile Styles (temples.css equivalent) --- */
+
+body {
+    font-family: var(--font-main);
+    color: var(--text-dark);
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+}
+
+h1, h2 {
+    font-family: var(--font-main);
+    color: var(--primary-dark);
+    text-align: center;
+}
+
+/* HEADER AND MOBILE NAV */
+header {
+    background-color: var(--primary-dark);
+    color: var(--secondary-light);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    position: relative; /* Needed for absolute positioning of nav */
+}
+
+header h1 {
+    color: var(--secondary-light);
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+/* Hamburger Menu Icon */
+.menu-icon {
+    display: block; /* Visible by default on mobile */
+    color: var(--secondary-light);
+    font-size: 2rem;
+    text-decoration: none;
+    padding: 0 10px;
+    cursor: pointer;
+    line-height: 1; /* Fix vertical alignment */
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Mobile Menu Links - Initially Hidden */
+.nav-links {
+    display: none; 
+    position: absolute;
+    top: 100%; /* Position right below the header */
+    right: 0;
+    background-color: var(--primary-dark);
+    width: 100%;
+    z-index: 10;
+}
+
+.nav-links.show {
+    display: block; /* Toggled by JavaScript */
+}
+
+.nav-links li {
+    text-align: center;
+}
+
+.nav-links a {
+    display: block;
+    padding: 1rem;
+    color: var(--secondary-light);
+    text-decoration: none;
+    border-top: 1px solid var(--hover-accent);
+}
+
+.nav-links a:hover {
+    background-color: var(--hover-accent);
+}
+
+/* MAIN CONTENT */
+main {
+    /* Mobile Max Width */
+    max-width: 650px; 
+    margin: 0 auto; /* Center the main content */
+    padding: 1rem;
+}
+
+main h2 {
+    margin-top: 1rem;
+}
+
+/* ALBUM GRID (Mobile - Single Column) */
+.album-grid {
+    display: grid;
+    grid-template-columns: 1fr; /* One column for mobile */
+    gap: 1rem;
+}
+
+figure {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    border: 2px solid var(--hover-accent);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+figure:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+figure img {
+    width: 100%;
+    height: auto;
+    display: block;
+    aspect-ratio: 4/3; /* Maintain a consistent photo shape */
+    object-fit: cover;
+}
+
+figcaption {
+    background-color: var(--secondary-light);
+    padding: 0.75rem;
+    font-size: 0.9rem;
+    color: var(--text-dark);
+}
+
+/* FOOTER */
+footer {
+    background-color: var(--primary-dark);
+    color: var(--secondary-light);
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: 2rem;
+    font-size: 0.9rem;
+}
+
+footer p {
+    margin: 0.5rem 0;
+}
