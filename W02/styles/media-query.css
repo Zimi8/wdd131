@@ -1,37 +1,34 @@
-/* This file contains the base styles for the page, 
-    applied when no media query conditions are met (or on small screens).
-*/
+
+
 
 body {
-    /* Apply the linked Google Font (Roboto) */
+
     font-family: 'Roboto', sans-serif;
-    /* Basic background for the whole page */
+
     background-color: #f4f4f4;
 }
 
-/* Common styling for the main layout elements */
+
 header, 
 main, 
 footer {
-    max-width: 640px; /* Max width constraint */
-    margin: 1rem auto; /* Center the elements on the page with 1rem top/bottom margin */
-    border: 1px solid #bbb; /* Faint border */
-    padding: 1rem; /* Appropriate padding inside */
-    background-color: #e6f2ff; /* Blueish background color */
+    max-width: 640px; 
+    margin: 1rem auto; 
+    border: 1px solid #bbb; 
+    padding: 1rem; 
+    background-color: #e6f2ff; 
 }
 
 main {
-    /* Set up the main element as a CSS grid */
     display: grid;
-    /* By default, it's a single column (1fr = one fractional unit) */
     grid-template-columns: 1fr;
-    /* Equal gap between grid items */
+    
     grid-gap: 1rem;
 }
 
 section {
     padding: 1rem;
-    background-color: #fff; /* Lighter/white background for sections */
+    background-color: #fff; 
     border: 1px solid #ddd;
-    border-radius: 5px; /* Add a slight corner radius for aesthetics */
+    border-radius: 5px; 
 }
