@@ -1,0 +1,184 @@
+
+/*  CSS global  ('im using chilean colors because I served the mission there) */
+
+:root {
+    /* Colors based on Chile flag */
+    --primary-color: #D52B1E; /* Red (Rojo) - Used for Headers/Dividers */
+    --secondary-color: #0032A0; /* Blue (Azul) - Used for Footers/Labels */
+    --tertiary-color: #ffffff; /* White (Blanco) */
+    --accent-color: #333333;
+    --font-family-title: 'Georgia', serif;
+    --font-family-body: 'Helvetica Neue', Helvetica, sans-serif;
+    --padding-base: 1em;
+}
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-family-body);
+    line-height: 1.6;
+    color: var(--accent-color);
+    background-color: #f0f0f0; /* Light background for contrast */
+}
+
+/*FONTSS*/
+h1 {
+    font-family: var(--font-family-title);
+    font-size: 2em;
+    letter-spacing: 1px;
+}
+
+h2 {
+    font-size: 1.5em;
+    color: var(--secondary-color); /* Blue for section titles */
+    margin-bottom: 0.5em;
+    padding: 0.5em 0;
+    border-bottom: 2px solid var(--primary-color); /* Red divider */
+    text-align: center;
+}
+
+/* Header and Footer */
+
+.page-header {
+    background-color: var(--primary-color); /* Red Header */
+    color: var(--tertiary-color);
+    padding: var(--padding-base);
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.page-footer {
+    background-color: var(--secondary-color); /* Blue Footer */
+    color: var(--tertiary-color);
+    padding: var(--padding-base);
+    text-align: center;
+    font-size: 0.8em;
+    margin-top: 1em;
+}
+
+.page-footer p {
+    margin: 0.2em 0;
+}
+
+
+/* HERO Image */
+.hero-image img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+/*wrapped for mobile repsonsive*/
+.content-wrapper {
+    padding: var(--padding-base);
+}
+
+.data-section,
+.weather-section {
+    background-color: var(--tertiary-color);
+    padding: var(--padding-base);
+    margin-bottom: var(--padding-base);
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Definition List (dl) Styling for Data/Weather */
+dl {
+    display: grid;
+    grid-template-columns: auto 1fr; /* Label and Value columns */
+    gap: 0.5em 1em;
+    max-width: 400px; 
+    margin: 0 auto;
+}
+
+dt {
+    font-weight: bold;
+    text-align: right;
+    color: var(--secondary-color); 
+}
+
+dd {
+    text-align: left;
+}
+
+/* Mobile Weather Icon (SVG) */
+.weather-icon-mobile {
+    text-align: center;
+    margin: 1em 0;
+}
+
+.weather-icon-mobile svg {
+    width: 60px; 
+    height: auto;
+}
+/*pseudo element*/
+.weather-section h2::after {
+    display: none;
+}
+
+/*mediaquery */
+@media (min-width: 768px) {
+    /* CENTER THE MAINNN */
+    body {
+        max-width: 1200px;
+        margin: 0 auto;
+        background-color: #f0f0f0; 
+    }
+
+    /* Main Layout Grid */
+    .content-wrapper {
+        display: grid;
+        
+        grid-template-columns: 1fr 2fr 1fr; 
+        gap: 2em;
+        align-items: start; /* Align sections to the top */
+        padding: var(--padding-base);
+    }
+
+    /* center column here */
+    .hero-image {
+        grid-column: 2 / 3;
+        grid-row: 1 / 3; 
+        margin: 0;
+    }
+    
+    .hero-image img {
+        height: 100%;
+        max-height: 60vh;
+        border-radius: 8px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Position Data and Weather sections */
+    .data-section {
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+        align-self: flex-start;
+    }
+
+    .weather-section {
+        grid-column: 3 / 4;
+        grid-row: 1 / 2;
+        align-self: flex-start;
+    }
+
+    /* Hiding the mobile weather icon */
+    .weather-icon-mobile {
+        display: none;
+    }
+    
+   
+    .weather-section h2::after {
+        /* EMOJI for weather icon  */
+        content: " 🌤️"; 
+        display: inline;
+        font-size: 1.2em;
+        margin-left: 0.5em;
+    }
+}

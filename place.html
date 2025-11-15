@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chile Place</title>
+    <meta name="description" content="Media query learning activity example page using a single breakpoint.">
+    <meta name="author" content="Ezequiel Jimenez">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/place.css">
+    <script src="script/place.js" defer></script>
+</head>
+<body>
+
+    <header class="page-header">
+        <h1>Coquimbo, Chile</h1>
+    </header>
+
+    <!-- Hero Image Section (Responsive Images with srcset and WebP requirement) -->
+<div class="hero-image">
+    <picture>
+        <!-- Image large (desktop) -->
+        <source 
+            srcset="images/coquimbo-high.webp"
+            media="(min-width: 768px)"
+            type="image/webp">
+
+        <!-- Images small  (mobile) -->
+        <source 
+            srcset="images/coquimbo-small.webp"
+            media="(max-width: 767px)"
+            type="image/webp">
+
+     
+        <img 
+            src="images/coquimbo-small.jpg"
+            alt="A view of the Coquimbo port and bay in Chile">
+    </picture>
+</div>  
+
+    <!-- Main Content Area -->
+    <main class="content-wrapper">
+
+        <!-- Data Section -->
+        <section class="data-section">
+            <h2 class="section-title">Data</h2>
+            <dl>
+                <dt>Region:</dt>
+                <dd>Coquimbo (IV)</dd>
+                <dt>Population:</dt>
+                <dd>~200,000</dd>
+                <dt>Area:</dt>
+                <dd>40,579.9 km²</dd>
+                <dt>Languages:</dt>
+                <dd>Spanish</dd>
+                <dt>Currency:</dt>
+                <dd>Chilean Peso (CLP)</dd>
+                <dt>Time Zone:</dt>
+                <dd>UTC-3</dd>
+                <dt>Calling Code:</dt>
+                <dd>+56</dd>
+                <dt>Internet TLD:</dt>
+                <dd>.cl</dd>
+            </dl>
+        </section>
+
+        <!-- Weather Section -->
+        <section class="weather-section">
+            <h2 class="section-title">Weather</h2>
+            <!-- Weather icon for mobile view (Required: SVG, inline for self-containment) -->
+            <div class="weather-icon-mobile">
+                <!-- SVG Placeholder for Partly Cloudy (Coastal weather) -->
+                <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="#f6c243" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="4" fill="#f6c243"/>
+                    <path d="M16 12h2M6 12h2M12 16v2M12 6V4M19 5l-1 1M5 19l1-1"/>
+                    <path d="M19 19l-1-1M5 5l1 1"/>
+                </svg>
+            </div>
+<!-- weather box-->
+            <dl>
+                <dt>Temperature:</dt>
+                <dd id="tempValue">15 °C</dd>
+                <dt>Conditions:</dt>
+                <dd>Partly Cloudy</dd>
+                <dt>Wind:</dt>
+                <dd id="windSpeed">12 km/h</dd>
+                <dt class="windchill-label">Wind Chill:</dt>
+
+                <dd class="windchill-value" id="windChillValue">TBD</dd> 
+            </dl>
+        </section>
+
+    </main>
+    
+<!-- Footer  -->
+    <footer class="page-footer">
+        <p class="copyright">
+            &copy;<span id="currentYear"></span> Ezequiel Jimenez | "I want to visit: Coquimbo, Chile"
+        </p>
+        <p class="modified-date">
+            Last Modification: 02/08/2024 22:47:47
+        </p>
+    </footer>
+</body>
+</html>
