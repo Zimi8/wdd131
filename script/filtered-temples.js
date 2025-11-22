@@ -62,7 +62,7 @@ const temples = [
       location: "Salt Lake City, Utah, United States",
       dedicated: "1893, April, 6",
       area: 253000,
-      imageUrl: "images/imagesTemple/saltlakeesa.jpg"
+      imageUrl: "images/imagesTemple/saltlake.jpg"
     },
 
     {
@@ -70,7 +70,7 @@ const temples = [
       location: "Sapporo, Japan",
       dedicated: "2016, August, 21",
       area: 48480,
-      imageUrl: "sapporo"
+      imageUrl: "images/imagesTemple/sapporo.jpg"
     }
   ];
 
