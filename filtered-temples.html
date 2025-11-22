@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Ezequiel Jimenez">
+    <meta name="description" content="Explore our beautiful temple photo gallery featuring sacred LDS temples from around the world including Buenos Aires, Rome, Tokyo, and more.">
+    <title>Filtered Temple Album</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Elms+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<!-- new css -->
+    <link rel="stylesheet" href="styles/filtered-temples.css">
+    <link rel="stylesheet" href="styles/filtered-temples-large.css">
+
+    <script src="script/filtered-temples.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Filtered Temple Album</h1>
+        <nav>
+<!-- TOGGLE OR HAMGUR-->
+            <a href="#" class="menu-icon" aria-label="Menu">☰</a> 
+            <ul class="nav-links">
+<!-- IDS-->
+                <li><a href="#" id="home-link" title="Home">Home</a></li>
+                <li><a href="#" id="old-link" title="Old Temples (Before 1900)">Old</a></li>
+                <li><a href="#" id="new-link" title="New Temples (After 2000)">New</a></li>
+                <li><a href="#" id="large-link" title="Large Temples (> 90,000 sq ft)">Large</a></li>
+                <li><a href="#" id="small-link" title="Small Temples (< 10,000 sq ft)">Small</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+<!--ccollection -->
+        <h2 id="gallery-heading">A Collection of Sacred Temples.</h2>
+        <div class="album-grid">
+<!-- copying the example that will generate the cards this time-->
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy;<span id="currentyear"></span> Ezequiel Jimenez ⏰ Buenos Aires</p>
+        <p>Last Modification: <span id="lastModified"></span></p>
+    </footer>
+
+</body>
+</html>

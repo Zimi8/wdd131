@@ -7,7 +7,7 @@
     --font-main: 'Elms Sans', sans-serif;
 }
 
-/* --- Base & Mobile Styles --- */
+/* --- Base & Mobile Styles (temples.css equivalent) --- */
 
 body {
     font-family: var(--font-main);
@@ -31,7 +31,7 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 1rem;
-    position: relative; 
+    position: relative; /* Needed for absolute positioning of nav */
 }
 
 header h1 {
@@ -42,32 +42,34 @@ header h1 {
 
 /* Hamburger Menu Icon */
 .menu-icon {
-    display: block; 
+    display: block; /* Visible by default on mobile */
     color: var(--secondary-light);
     font-size: 2rem;
     text-decoration: none;
+    padding: 0 10px;
     cursor: pointer;
-    z-index: 100;
+    line-height: 1; /* Fix vertical alignment */
 }
 
-/* Navigation Links - Mobile Default */
-.nav-links {
+nav ul {
     list-style: none;
-    margin: 0;
     padding: 0;
-    /* Hidden by default on mobile */
+    margin: 0;
+}
+
+/* Mobile Menu Links - Initially Hidden */
+.nav-links {
     display: none; 
-    flex-direction: column;
     position: absolute;
     top: 100%; /* Position right below the header */
-    left: 0;
-    width: 100%;
+    right: 0;
     background-color: var(--primary-dark);
-    z-index: 99;
+    width: 100%;
+    z-index: 10;
 }
 
 .nav-links.show {
-    display: flex; /* Toggled by JavaScript */
+    display: block; /* Toggled by JavaScript */
 }
 
 .nav-links li {
@@ -82,10 +84,8 @@ header h1 {
     border-top: 1px solid var(--hover-accent);
 }
 
-.nav-links a:hover,
-.nav-links a.active { /* Style for active/current filter link */
+.nav-links a:hover {
     background-color: var(--hover-accent);
-    color: var(--text-dark); /* Dark text on hover/active */
 }
 
 /* MAIN CONTENT */
@@ -98,14 +98,13 @@ main {
 
 main h2 {
     margin-top: 1rem;
-    margin-bottom: 1.5rem;
 }
 
 /* ALBUM GRID (Mobile - Single Column) */
 .album-grid {
     display: grid;
     grid-template-columns: 1fr; /* One column for mobile */
-    gap: 1.5rem; /* Increased gap */
+    gap: 1rem;
 }
 
 figure {
@@ -117,7 +116,6 @@ figure {
     overflow: hidden;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
-    background-color: #ffffff;
 }
 
 figure:hover {
@@ -129,50 +127,27 @@ figure img {
     width: 100%;
     height: auto;
     display: block;
-    aspect-ratio: 400/250; /* Maintain aspect ratio for the images */
+    aspect-ratio: 4/3; /* Maintain a consistent photo shape */
     object-fit: cover;
 }
 
-/* FIGCAPTION STYLES FOR DYNAMIC CARDS */
 figcaption {
-    padding: 1rem;
-    text-align: left;
-}
-
-figcaption h3 {
-    margin-top: 0;
-    margin-bottom: 0.5rem;
-    color: var(--primary-dark);
-    font-size: 1.25rem;
-    border-bottom: 1px solid #eeeeee;
-    padding-bottom: 5px;
-}
-
-figcaption p {
-    margin: 0.3rem 0;
-    font-size: 0.95rem;
-}
-
-.label {
-    font-weight: bold;
-    color: var(--hover-accent);
-    display: inline-block;
-    min-width: 75px; /* Aligns the data nicely */
-}
-
-.no-results {
-    grid-column: 1 / -1; /* Center message in the grid */
-    text-align: center;
-    padding: 3rem;
-    font-size: 1.2rem;
-    color: var(--hover-accent);
+    background-color: var(--secondary-light);
+    padding: 0.75rem;
+    font-size: 0.9rem;
+    color: var(--text-dark);
 }
 
 /* FOOTER */
 footer {
     background-color: var(--primary-dark);
     color: var(--secondary-light);
-    padding: 1rem;
     text-align: center;
+    padding: 1.5rem;
     margin-top: 2rem;
+    font-size: 0.9rem;
+}
+
+footer p {
+    margin: 0.5rem 0;
 }
