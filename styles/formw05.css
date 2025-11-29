@@ -42,7 +42,6 @@ main {
     border-radius: 8px;
 }
 
-/* --- Form Container and Layout (Best Practices: Single Column) --- */
 form {
     display: flex;
     flex-direction: column;
@@ -62,7 +61,7 @@ legend {
     padding: 0 10px;
 }
 
-/* --- Form Groups (Proximity Principle) --- */
+
 .form-group {
     display: flex;
     flex-direction: column;
@@ -76,7 +75,7 @@ label {
     margin-bottom: 5px; 
 }
 
-/* --- Inputs, Select, and Textarea Styling (44px touch target) --- */
+
 input[type="text"],
 input[type="number"],
 select,
@@ -95,7 +94,7 @@ textarea {
     resize: vertical; 
 }
 
-/* Focus State for Usability */
+
 input:focus,
 select:focus,
 textarea:focus {
@@ -104,7 +103,7 @@ textarea:focus {
     outline: none;
 }
 
-/* --- Radio Button Group --- */
+
 .radio-group {
     display: flex;
     flex-direction: column; 
@@ -120,7 +119,6 @@ textarea:focus {
     color: var(--color-text-dark);
 }
 
-/* --- Submit Button (Action-oriented, 44px touch target) --- */
 input[type="submit"] {
     background-color: var(--color-action); 
     color: white;
@@ -153,7 +151,6 @@ footer p {
     margin: 5px 0;
 }
 
-/* --- Responsive Design (Mobile First) --- */
 @media (max-width: 650px) {
     main {
         margin: 10px;
