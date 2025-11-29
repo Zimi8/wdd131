@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suggest a Pizzeria | Argentina Pizza Tour</title>
+    <meta name="author" content="Ezequiel Jimenez">
+    <meta name="description" content="Form to suggest a new pizzeria for the Argentina Pizza Tour website.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/formw05.css">
+    <script src="script/formw05.js" defer></script>
+    
+
+</head>
+<body>
+
+    <header>
+        <h1>Suggest a Pizzeria for the Tour</h1>
+    </header>
+
+    <main>
+
+        <form method="get" action="review.html"> 
+            
+            <fieldset>
+                <legend>Pizzeria Details (Required*)</legend>
+                
+
+                <div class="form-group">
+                    <label for="pizzeriaName">Pizzeria Name</label>
+                    <input type="text" id="pizzeriaName" name="pizzeriaName" required>
+                </div>
+
+<!-- Province Selector!!  -->
+                <div class="form-group">
+                    <label for="province">Province / Location</label>
+                    <select id="province" name="province" required>
+                        <option value="" disabled selected>Select an Argentine Province ...</option>
+                    </select>
+                </div>
+
+<!--  Opening Year -->
+                <div class="form-group">
+                    <label for="openYear">Year of Opening</label>
+                    <!-- Using type="number" with max/min constraints is a good practice -->
+                    <input type="number" id="openYear" name="openYear" min="1800" max="2025" value="2000" required>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Pizza Speciality (Required)</legend>
+                
+<!-- Speciality Pizza (Radio Buttons - only one ! choice allowed) -->
+                <p>Most Famous Pizza Speciality (Select One):</p>
+                <div class="radio-group">
+                    
+                    <label for="muza">
+                        <input type="radio" id="muza" name="speciality" value="Muza" required>
+                        Muza (Mozzarella)
+                    </label>
+
+                    <label for="fugazzeta">
+                        <input type="radio" id="fugazzeta" name="speciality" value="Fugazzeta">
+                        Fugazzeta (Onion filled with cheese)
+                    </label>
+
+                    <label for="napolitana">
+                        <input type="radio" id="napolitana" name="speciality" value="Napolitana">
+                        Napolitana (Olive and Garlic)
+                    </label>
+
+                    <label for="jamon">
+                        <input type="radio" id="jamon" name="speciality" value="JamonYMorron">
+                        Jamon y Morrón
+                    </label>
+
+                    <label for="otherSpeciality">
+                        <input type="radio" id="otherSpeciality" name="speciality" value="Other">
+                        Other
+                    </label>
+                </div>
+                
+<!-- Additional text box for other speciality description (if is not in the list i passed before or is a unkown type of pizza ) -->
+                <div class="form-group">
+                    <label for="pizzaDescription">Speciality Pizza Title & Short Description (50 words max) <span class="optional">(Optional)</span></label>
+                    <textarea id="pizzaDescription" name="pizzaDescription" rows="3" maxlength="300" placeholder="Ej: Provolone and Tomato Pizza, very creamy and savory."></textarea>
+                </div>
+            </fieldset>
+
+<!--  History or Link (Optional) -->
+            <fieldset>
+                <legend>Pizzeria History (Optional)</legend>
+                <div class="form-group">
+                    <label for="history">Brief History or History Link (200 words max)</label>
+                    <textarea id="history" name="history" rows="5" maxlength="1200" placeholder="Ej: Founded in 1940 by Italian and spanish inmigrants... or Paste a link to the history."></textarea>
+                </div>
+            </fieldset>
+
+<!-- Form Submission Button -->
+            <input type="submit" value="Suggest Pizzeria">
+        </form>
+    </main>
+    <footer>
+        <p>&copy; 2025 Argentina Pizza Tour | Ezequiel Jimenez</p>
+        <p>Last Modification: <span id="lastModified"></span></p>
+    </footer>
+
+</body>
+</html>

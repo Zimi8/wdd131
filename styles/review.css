@@ -1,0 +1,69 @@
+        :root {
+            --color-primary-dark: #0b3954; 
+            --color-secondary-medium: #1f6f8b; 
+            --color-action: #55a630; 
+            --color-background: #f4f4f9; 
+            --color-text-dark: #333;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--color-background);
+            color: var(--color-text-dark);
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: var(--color-primary-dark);
+            color: white;
+            padding: 1rem;
+            text-align: center;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 1.8rem;
+        }
+
+        main {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 40px 20px;
+            background-color: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .confirmation-message {
+            color: var(--color-action);
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+        
+        .confirmation-count {
+            font-size: 1.2rem;
+            color: var(--color-primary-dark);
+            font-weight: 600;
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid var(--color-secondary-medium);
+            border-radius: 4px;
+            display: inline-block;
+        }
+
+        /* --- Footer --- */
+        footer {
+            background-color: var(--color-primary-dark);
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            font-size: 0.8rem;
+            margin-top: 20px;
+        }
+
+        footer p {
+            margin: 5px 0;
+        }

@@ -39,23 +39,21 @@ body {
 }
 
 h1, h2, h3 {
-    /* Nueva fuente Sancreek aplicada a los encabezados */
+
     font-family: 'Sancreek', cursive; 
     color: var(--color-gold-primary); 
     margin-bottom: 0.5rem;
 }
 
-/* ESTILO PARA CONTENIDO PRINCIPAL (SECCIONES 1-6) */
 .body-text-sansita p {
-    font-family: 'Sansita', cursive; /* Aplicar Sansita a los párrafos dentro de las secciones */
+    font-family: 'Sansita', cursive; 
 }
 
-/* UTILIDADES Y COMPONENTES */
 .text-gold { color: var(--color-gold-primary); }
 .bg-maroon { background-color: var(--color-maroon); }
 .bg-teal-dark { background-color: var(--color-teal-dark); }
 
-/* Contenedor principal para centrar el contenido (equivalente a max-w-6xl mx-auto) */
+
 .main-container {
     max-width: 1152px; /* ~72rem */
     margin: 0 auto;
@@ -63,7 +61,7 @@ h1, h2, h3 {
     padding-bottom: 1rem;
     display: flex;
     flex-direction: column;
-    gap: 2.5rem; /* Separación de las secciones (space-y-10) */
+    gap: 2.5rem; 
 }
 
 /* HEADER */
@@ -195,8 +193,6 @@ hr {
 
 /* FOOTER Turquesa */
 footer {
-
-
     background-color: var(--color-teal-dark);
 
     margin-top: 3rem; 
