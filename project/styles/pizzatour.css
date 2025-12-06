@@ -1,4 +1,4 @@
-/* VARIABLES DE COLOR */
+
 :root {
     --color-maroon: #680002;
     --color-gold-primary: #c5a844;
@@ -11,21 +11,19 @@
     --color-slate-black: #232221;
 }
 
-/* ESTILO GLOBAL Y TIPOGRAFÍA */
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
-/* FIX: Asegurar que el color bordó cubra TODO el viewport */
+
 html {
     background-color: var(--color-maroon);
 }
 
 body {
     font-family: 'Inter', sans-serif;
-    /* El fondo del body sigue siendo bordó */
     background-color: var(--color-maroon);
     color: var(--color-text);
     min-height: 100vh;
@@ -55,7 +53,7 @@ h1, h2, h3 {
 
 
 .main-container {
-    max-width: 1152px; /* ~72rem */
+    max-width: 1152px; 
     margin: 0 auto;
     padding-top: 1rem;
     padding-bottom: 1rem;
@@ -64,7 +62,7 @@ h1, h2, h3 {
     gap: 2.5rem; 
 }
 
-/* HEADER */
+
 header {
     text-align: center;
     margin-bottom: 1rem;
@@ -89,10 +87,10 @@ header h1 {
 header p {
     font-size: 1.125rem;
     margin-top: 0.5rem;
-    color: #d1d5db; /* gray-300 */
+    color: #d1d5db; 
 }
 
-/* TARJETA DE CONTENIDO (content-card) */
+
 .content-card {
     padding: 1.5rem;
     border-radius: 0.75rem;
@@ -102,7 +100,7 @@ header p {
 }
 
 .content-card h2 {
-    font-size: 1.875rem; /* text-3xl */
+    font-size: 1.875rem;
     font-weight: bold;
     margin-bottom: 1rem;
 }
@@ -112,7 +110,7 @@ hr {
     border-top: 2px solid var(--color-teal-dark);
     margin-bottom: 1rem;
 }
-/*(trying to mimic CSS - adjacent sibling selector from codepen)*/
+
 .space-y-3 {
   display: flex;
   flex-direction: column;
@@ -191,14 +189,14 @@ hr {
 }
 
 
-/* FOOTER Turquesa */
+
 footer {
     background-color: var(--color-teal-dark);
 
     margin-top: 3rem; 
     padding: 2rem; 
     text-align: center;
-    color: #1f2937; /
+    color: #1f2937; 
     font-size: 1rem; 
     font-weight: 600;
 }

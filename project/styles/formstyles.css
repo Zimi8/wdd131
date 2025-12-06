@@ -1,4 +1,4 @@
-/* --- VARIABLES --- */
+
 :root {
     --color-red: #740000;     
     --color-teal: #0097a7;    
@@ -9,10 +9,10 @@
     --font-body: 'Sansita', sans-serif;
 }
 
-/* --- FORM LAYOUT --- */
+
 .form-section {
     padding: 40px 0;
-    background-color: #f4f4f4; /* Light contrast against the red header */
+    background-color: #f4f4f4; 
     min-height: 80vh;
 }
 
@@ -87,7 +87,7 @@ input:focus, select:focus, textarea:focus {
     display: block;
     width: 100%;
     padding: 15px;
-    background-color: #2e7d32; /* Olive Green matching Tour button */
+    background-color: #2e7d32; 
     color: #fff;
     font-family: var(--font-body);
     font-size: 1.5rem;
@@ -102,6 +102,7 @@ input:focus, select:focus, textarea:focus {
     background-color: #1b5e20;
     transform: scale(1.02);
 }
+
 
 .footer-meta {
     margin-top: 10px;
