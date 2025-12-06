@@ -1,0 +1,632 @@
+/* Importar fuentes de Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Sancreek&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sansita:wght@400;700&display=swap');
+
+/* -------------------------------------------------------------------
+   1. COLOR VARIABLES & FONTS
+   ------------------------------------------------------------------- */
+:root {
+    /* Colores estrictamente definidos por el cliente */
+    --color-maroon: #680002;       /* Primary Background (Bordó) */
+    --color-gold-primary: #C5A844; /* Primary Accent (Gold) */
+    --color-gold-dark: #9D8006;    /* Accent Hover/Shadow (Amarillo apagado) */
+    --color-teal-dark: #0097B2;    /* Secondary Accent (Turquesa oscuro 1) */
+    --color-teal-light: #41AEC8;   /* Secondary Accent (Turquesa Claro 2 - Botón) */
+    --color-text: #F3F4F6;         /* Text Color (Light Cream) */
+    --color-red: #AF2725;          /* Supplementary Red (Header Background) */
+    --color-slate-black: #232221;  /* Supplementary Slate Black (Negro Pizarra) */
+    --color-olive: #5C7442;        /* Supplementary Olive Green (Verde Aceituna) */
+
+    /* Fuentes actualizadas según el pedido */
+    --font-heading: 'Sancreek', serif;
+    --font-body: 'Sansita', sans-serif;
+    --max-content-width: 1200px;
+}
+
+/* -------------------------------------------------------------------
+   2. GLOBAL RESET & BASE STYLES
+   ------------------------------------------------------------------- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Ensure full viewport usage */
+html, body {
+    width: 100%;
+    overflow-x: hidden; /* Prevents horizontal scrolling */
+}
+
+body {
+    background-color: var(--color-maroon);
+    color: var(--color-text);
+    font-family: var(--font-body);
+    line-height: 1.6;
+}
+
+/* This container limits the width of content inside full-width sections */
+.container {
+    max-width: var(--max-content-width);
+    margin: 0 auto;
+    padding: 0 1.5rem; /* Horizontal padding for mobile/smaller screens */
+}
+
+/* Main content area wrapper for elements that should be centered (like the gallery) */
+.main-content-area {
+    max-width: var(--max-content-width);
+    margin: 0 auto;
+    padding: 1rem 1.5rem; /* Add padding to prevent content from touching screen edges */
+}
+
+a {
+    color: var(--color-gold-primary);
+    text-decoration: none;
+    transition: color 0.3s, background-color 0.3s;
+}
+
+a:hover {
+    color: var(--color-teal-light);
+}
+
+h1, h2, h3 {
+    font-family: var(--font-heading);
+    color: var(--color-gold-primary);
+    margin-bottom: 0.5rem;
+}
+
+h2 { font-size: 2.2rem; }
+h3 { font-size: 1.6rem; }
+
+
+/* -------------------------------------------------------------------
+   3. HEADER & NAVIGATION (NON-GRID)
+   ------------------------------------------------------------------- */
+.main-header {
+    background-color: var(--color-red);
+    padding: 1rem 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 3px solid var(--color-teal-dark);
+}
+
+/* ... (Logo and Nav styles remain the same) ... */
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.pizza-logo-icon {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+.logo-text {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--color-text);
+    text-shadow: 1px 1px 2px var(--color-slate-black);
+}
+
+.main-nav {
+    display: none; 
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.main-nav a {
+    color: var(--color-text);
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    font-weight: bold;
+    border: 1px solid transparent;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+.main-nav a:hover,
+.main-nav a.active {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-color: var(--color-gold-primary);
+    color: var(--color-gold-primary);
+}
+
+.hamburger-menu {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    z-index: 100;
+}
+
+.hamburger-menu .bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: var(--color-text);
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+}
+
+.main-header.menu-open .main-nav {
+    display: flex;
+    flex-direction: column;
+    position: fixed; /* Use fixed for full viewport coverage */
+    top: 0;
+    right: 0;
+    width: 70%;
+    height: 100%; /* Full height */
+    background-color: var(--color-red);
+    padding-top: 5rem;
+    box-shadow: -5px 0 10px rgba(0, 0, 0, 0.5);
+    z-index: 90;
+}
+
+/* Hamburger X Transformation */
+.main-header.menu-open .hamburger-menu .bar:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+.main-header.menu-open .hamburger-menu .bar:nth-child(2) {
+    opacity: 0;
+}
+.main-header.menu-open .hamburger-menu .bar:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+/* -------------------------------------------------------------------
+   4. FULL WIDTH SECTIONS
+   ------------------------------------------------------------------- */
+
+/* Base style for full-width sections (covers 100% of viewport width) */
+.full-width-section {
+    width: 100%;
+    padding: 3rem 0; /* Padding is handled by the container horizontally */
+}
+
+/* Service Intro Section - Teal background (Wireframe top block) */
+.service-intro-section {
+    background-color: var(--color-teal-dark);
+    color: var(--color-text);
+    text-align: center;
+    border-top: 5px solid var(--color-teal-light);
+    border-bottom: 5px solid var(--color-teal-light);
+}
+
+.service-intro-section .container {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.service-intro-section h2 {
+    color: var(--color-gold-primary);
+    font-size: 2.5rem;
+}
+
+.intro-icon {
+    font-size: 3rem;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+/* -------------------------------------------------------------------
+   5. VISUAL GALLERY (NEW SECTION)
+   ------------------------------------------------------------------- */
+.visual-gallery {
+    padding: 0; /* Remove vertical padding as items fill space */
+    background-color: var(--color-slate-black); /* Dark background for contrast */
+    border-bottom: 5px solid var(--color-teal-dark);
+}
+
+.gallery-grid {
+    display: grid;
+    gap: 10px; /* Small gap between images */
+    padding: 10px; /* Internal padding for the grid */
+}
+
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    margin: 0;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover {
+    transform: scale(1.02);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.gallery-item figcaption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    color: var(--color-text);
+    padding: 0.5rem;
+    text-align: center;
+    font-weight: bold;
+    font-size: 0.9rem;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.gallery-item:hover figcaption {
+    opacity: 1;
+}
+
+/* Mobile Layout: 2 columns, stacked vertically */
+.gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 200px; /* Fixed height for small items */
+}
+
+/* Desktop/Tablet Layout: 4 items in a specific pattern */
+@media (min-width: 768px) {
+    .gallery-grid {
+        /* Grid setup: 3 columns */
+        grid-template-columns: 1.5fr 1fr 1.5fr; 
+        grid-auto-rows: 300px;
+    }
+    
+    /* Image 1: Takes 2 columns, 1 row (Top left large) */
+    .gallery-item:nth-child(1) {
+        grid-column: 1 / span 2;
+        grid-row: 1 / span 1;
+    }
+
+    /* Image 2: Takes 1 column, 1 row (Top right small) */
+    .gallery-item:nth-child(2) {
+        grid-column: 3 / span 1;
+        grid-row: 1 / span 1;
+    }
+
+    /* Image 3: Takes 1 column, 1 row (Bottom left small) */
+    .gallery-item:nth-child(3) {
+        grid-column: 1 / span 1;
+        grid-row: 2 / span 1;
+    }
+
+    /* Image 4: Takes 2 columns, 1 row (Bottom right large) */
+    .gallery-item:nth-child(4) {
+        grid-column: 2 / span 2;
+        grid-row: 2 / span 1;
+    }
+}
+
+
+/* -------------------------------------------------------------------
+   6. INTERACTIVE GALLERY & FACTS SECTION (GRID LAYOUT - CENTRED)
+   ------------------------------------------------------------------- */
+.gallery-facts-section {
+    display: grid;
+    /* Mobile: Stack gallery (full width) then facts (full width) */
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 3rem 0; /* Padding handled by .main-content-area */
+    background-color: var(--color-maroon); /* Wireframe main color */
+}
+
+/* Desktop Grid Layout */
+@media (min-width: 768px) {
+    .gallery-facts-section {
+        grid-template-columns: 2fr 1fr; /* 2/3 for gallery, 1/3 for facts */
+        padding: 4rem 0;
+    }
+}
+
+/* Interactive Gallery Styles (No change from previous version) */
+.interactive-gallery {
+    display: grid;
+    grid-template-rows: 2fr 1fr;
+    gap: 1rem;
+}
+
+.gallery-focus {
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 2px solid var(--color-gold-primary);
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    min-height: 250px;
+    position: relative;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.gallery-focus img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: none;
+}
+
+.gallery-focus img.active {
+    display: block;
+}
+
+.gallery-focus .initial-message {
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.6);
+    text-align: center;
+    padding: 1rem;
+}
+
+.gallery-thumbnails {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.5rem;
+}
+
+.thumbnail-item {
+    border: 2px solid var(--color-teal-dark);
+    cursor: pointer;
+    overflow: hidden;
+    border-radius: 5px;
+    opacity: 0.7;
+    transition: opacity 0.3s, transform 0.3s, border-color 0.3s;
+    position: relative;
+    height: 100px;
+}
+
+.thumbnail-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none;
+}
+
+.thumbnail-item:hover,
+.thumbnail-item.active {
+    opacity: 1;
+    transform: scale(1.05);
+    border-color: var(--color-gold-primary);
+}
+
+.facts-panel {
+    background-color: transparent;
+    padding: 1.5rem;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.facts-panel p {
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+}
+
+/* -------------------------------------------------------------------
+   7. CALL TO ACTION (CTA) - FILETEADO STYLE
+   ------------------------------------------------------------------- */
+.cta-tour-section {
+    background-color: var(--color-maroon);
+    padding: 3rem 0; 
+    text-align: center;
+    position: relative;
+    border-top: 5px solid var(--color-teal-light);
+    border-bottom: 5px solid var(--color-teal-light);
+}
+
+.cta-content {
+    background-color: var(--color-gold-primary);
+    color: var(--color-slate-black);
+    padding: 2.5rem 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.8);
+    position: relative;
+    z-index: 10;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Fileteado Style Decoration (Simplified with CSS shapes) */
+.cta-tour-section::before,
+.cta-tour-section::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 100px;
+    height: 100px;
+    background-color: transparent;
+    border: 5px solid var(--color-gold-dark);
+    border-radius: 50%;
+    z-index: 5;
+    transform: translateY(-50%);
+}
+
+.cta-tour-section::before {
+    left: 10%;
+    border-radius: 60% 40% 70% 30% / 30% 60% 40% 70%;
+}
+
+.cta-tour-section::after {
+    right: 10%;
+    border-radius: 30% 70% 40% 60% / 70% 40% 60% 30%;
+}
+
+@media (max-width: 768px) {
+    .cta-tour-section::before,
+    .cta-tour-section::after {
+        display: none;
+    }
+}
+
+.cta-title {
+    color: var(--color-slate-black);
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: var(--color-teal-light);
+    color: var(--color-text);
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    font-weight: bold;
+    text-transform: uppercase;
+    box-shadow: 0 5px 0 var(--color-teal-dark);
+    transition: all 0.2s ease;
+}
+
+.cta-button:hover {
+    background-color: var(--color-teal-dark);
+    box-shadow: 0 2px 0 var(--color-teal-dark);
+    transform: translateY(3px);
+    color: var(--color-text);
+}
+
+/* -------------------------------------------------------------------
+   8. FORM STYLES (FULL WIDTH)
+   ------------------------------------------------------------------- */
+.form-section {
+    padding: 3rem 0;
+    background-color: var(--color-maroon);
+    text-align: center;
+}
+
+.form-section .container {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.form-description {
+    margin-bottom: 2rem;
+    opacity: 0.8;
+}
+
+/* Nota: El formulario original fue reemplazado por un botón/enlace en el HTML */
+.pizzeria-form {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: rgba(255, 255, 255, 0.05);
+    padding: 2rem;
+    border-radius: 8px;
+    border: 1px solid var(--color-gold-primary);
+    text-align: left;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: var(--color-gold-primary);
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid var(--color-teal-dark);
+    border-radius: 4px;
+    background-color: var(--color-slate-black);
+    color: var(--color-text);
+    font-size: 1rem;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+/* ESTILO DEL BOTÓN DE ENLACE (reutilizando .cta-button para consistencia) */
+.form-link-button {
+    display: block;
+    width: 100%;
+    max-width: 300px;
+    margin: 1rem auto 0;
+    background-color: var(--color-teal-light);
+    color: var(--color-text);
+    padding: 1rem;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.1s;
+    box-shadow: 0 4px 0 var(--color-teal-dark);
+    text-transform: uppercase;
+    text-align: center; /* Asegura que el texto del enlace esté centrado */
+    text-decoration: none; /* Quitar el subrayado del enlace */
+}
+
+.form-link-button:hover {
+    background-color: var(--color-teal-dark);
+    box-shadow: 0 2px 0 var(--color-teal-dark);
+    transform: translateY(2px);
+    color: var(--color-text);
+}
+
+
+/* Form Message Box */
+.message-box {
+    margin-top: 1.5rem;
+    padding: 1rem;
+    border-radius: 4px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.message-box.success {
+    background-color: var(--color-olive); /* Olive */
+    color: var(--color-text);
+}
+
+.message-box.hidden {
+    display: none;
+}
+
+/* -------------------------------------------------------------------
+   9. LAZY LOADING & FOOTER
+   ------------------------------------------------------------------- */
+.lazy-image {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 2rem auto;
+    border-radius: 8px;
+    border: 5px solid var(--color-gold-primary);
+}
+
+footer {
+    background-color: var(--color-teal-dark);
+    padding: 1.5rem;
+    text-align: center;
+    color: var(--color-text);
+    font-size: 0.9rem;
+    font-weight: 500;
+    border-top: 5px solid var(--color-teal-light);
+}
+
+/* Desktop-specific adjustments */
+@media (min-width: 768px) {
+    .hamburger-menu {
+        display: none; /* Hide hamburger on desktop */
+    }
+    .main-nav {
+        display: block; /* Show full nav on desktop */
+    }
+}

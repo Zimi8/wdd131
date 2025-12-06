@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Ezequiel Jimenez">
+    <meta name="description" content="All the tours the consumer will choose">
+    <title>Argentina Pizza Tour - Our Tours</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sancreek&family=Sansita:ital,wght@0,400;0,700;0,800;0,900;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/home.css">
+    <link rel="stylesheet" href="styles/tour.css">
+    <script src="script/tour.js" defer></script>
+</head>
+<body>
+    <header class="gold-border-bottom">
+        <div class="container header-content">
+            <div class="logo-container">
+        
+                <img src="images/logo-nav.jpg" alt="Argentina Pizza Tour Logo" loading="lazy">
+                <span style="font-family: 'Sancreek', cursive; font-size: 2rem; color: #fff; vertical-align: middle; margin-left: 10px;"></span>
+            </div>
+        
+    <!-- Hamburg -->
+            <button class="menu-toggle" aria-label="Toggle navigation">
+                ☰
+            </button>
+
+            <nav class="nav-menu">
+                <ul>
+                     <li><a href="index.html">Home</a></li>
+                    <li><a href="tour.html" class="active-link">Tours</a></li>
+                    <li><a href="pizzeria.html">Pizzeria</a></li>
+                    <li><a href="history.html">History</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+
+    <section class="choose-header-section">
+        <h1 class="choose-title">CHOOSE YOUR TOUR</h1>
+        <p class="choose-subtitle">Taste the best flavour</p>
+    </section>
+
+    <section class="hero-slider-section">
+        <div class="slider-wrapper" id="hero-slider">
+
+        </div>
+
+        <button class="slider-btn prev-btn" id="btn-prev">&#10094;</button>
+        <button class="slider-btn next-btn" id="btn-next">&#10095;</button>
+    </section>
+
+    <main class="black-section">
+        <div class="tours-container" id="tours-container">
+                <!-- Dynamic via JS!  -->
+        </div>
+    </main>
+
+
+    <footer>
+        <div class="container">
+            ARGENTINA PIZZA TOUR - Save your culture by sharing it 
+        </div>
+    </footer>
+
+</body>
+</html>

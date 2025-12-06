@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking Confirmed | Argentina Pizza Tour</title>
+    <meta name="author" content="Ezequiel Jimenez">
+    <meta name="description" content="confirmation of the booking">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="as">
+    <link href="https://fonts.googleapis.com/css2?family=Sancreek&family=Sansita:ital,wght@0,400;0,700;0,800;0,900;1,400&display=swap" rel="stylesheet">
+    
+
+    <link rel="stylesheet" href="styles/home.css">
+    <link rel="stylesheet" href="styles/reviewtour.css">
+    
+
+    <script src="script/review.js" defer></script>
+</head>
+<body>
+
+
+    <header class="gold-border-bottom">
+        <div class="container header-content">
+            <div class="logo-container">
+                <img src="images/logo-nav.jpg" alt="Argentina Pizza Tour Logo" loading="lazy">
+                <span style="font-family: 'Sancreek', cursive; font-size: 2rem; color: #fff; vertical-align: middle; margin-left: 10px;"></span>
+            </div>
+            
+            <button class="menu-toggle" aria-label="Toggle navigation">☰</button>
+            
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="tour.html">Tours</a></li>
+                    <li><a href="pizzeria.html">Pizzeria</a></li>
+                    <li><a href="history.html">History</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="review-section">
+        <div class="container review-content">
+
+            <div class="success-icon">🍕✅</div>
+            
+            <h1 class="confirmation-title">Booking Confirmed!</h1>
+            
+            <p class="confirmation-msg">
+                Thank you for reserving your spot. We are preparing the oven!<br>
+                You will receive an email shortly with the details.
+            </p>
+
+            <div class="count-box">
+                <p>This is your <span id="suggestionCount" class="count-number">0</span> reservation submitted from this device.</p>
+            </div>
+            
+            <a href="form.html" class="btn-back">Book another Tour</a>
+        </div>
+    </main>
+
+
+<footer>
+    <div class="container">
+        <p>ARGENTINA PIZZA TOUR - Save your culture by sharing it</p>
+        <div class="footer-meta">
+            <p>&copy;<span id="currentyear"></span> Ezequiel Jimenez ⏰ Buenos Aires</p>
+            <p>Last Modification: <span id="lastModified"></span></p>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>

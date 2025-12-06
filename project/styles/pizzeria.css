@@ -1,0 +1,163 @@
+/* --- VARIABLES & RESET FOR PIZZERIA PAGE --- */
+:root {
+    /* Global Colors */
+    --color-red: #740000;     
+    --color-teal: #0097a7;    
+    --color-gold: #c5a03e;    
+    --color-black: #000000;
+    --color-text-light: #fdfdfd;
+    
+    /* Pizzeria Specific */
+    --color-header-bg: #1a1a1a;   /* Blackboard BG */
+    --color-title-blue: #87CEEB;  /* Vintage Blue Title */
+    --color-btn-gold: #c5a03e;    /* Gold Button */
+    --color-btn-hover: #b08d2b;
+    
+    /* Fonts */
+    --font-display: 'Sancreek', cursive;
+    --font-body: 'Sansita', sans-serif;
+}
+
+/* Active Link Style */
+nav a.active-link {
+    text-decoration: underline;
+    text-decoration-color: var(--color-text-light);
+    text-underline-offset: 4px;
+}
+
+/* 1. HEADER SECTION (Blackboard) */
+.pizzeria-header {
+    background-color: var(--color-header-bg);
+    background-image: url('../images/blackboard.jpg'); /* Texture reuse */
+    background-size: cover;
+    text-align: center;
+    padding: 40px 0;
+    border-bottom: 8px solid var(--color-gold);
+}
+
+.pizzeria-title {
+    font-family: var(--font-display);
+    color: var(--color-title-blue); /* Light vintage blue */
+    font-size: 4rem;
+    margin: 0;
+    text-shadow: 3px 3px 0px #000;
+    letter-spacing: 2px;
+}
+
+.pizzeria-subtitle {
+    font-family: var(--font-body);
+    color: var(--color-text-light);
+    font-size: 1.5rem;
+    margin-top: 10px;
+}
+
+/* 2. STORIES SECTION */
+.stories-section {
+    background-color: var(--color-header-bg); /* Dark background matching header */
+    background-image: url('../images/blackboard.jpg');
+    position: relative;
+    padding-bottom: 60px;
+}
+
+.separator-band {
+    background-color: var(--color-red);
+    height: 40px;
+    width: 100%;
+    margin-bottom: 40px;
+}
+
+.stories-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Split layout */
+    gap: 50px;
+    align-items: start;
+}
+
+/* Left: Text */
+.stories-heading {
+    font-family: var(--font-body);
+    color: var(--color-gold);
+    font-size: 1.8rem;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.text-block p {
+    font-family: var(--font-body);
+    color: var(--color-text-light); /* Yellowish text from wireframe/theme */
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+/* Right: Image */
+.stories-image-container {
+    border: 8px solid #fff; /* White Polaroid-style border */
+    transform: rotate(2deg); /* Slight vintage tilt */
+    box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+    background-color: #fff;
+}
+
+.stories-image-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* 3. CTA SECTION (Bottom Red) */
+.story-cta-section {
+    background-color: var(--color-red);
+    padding: 60px 0;
+    text-align: center;
+}
+
+.cta-heading {
+    font-family: var(--font-body);
+    color: var(--color-text-light);
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+}
+
+.btn-send-story {
+    background-color: var(--color-btn-gold);
+    color: #fff;
+    font-family: var(--font-body);
+    font-size: 1.5rem;
+    font-weight: 700;
+    border: none;
+    padding: 15px 40px;
+    border-radius: 50px; /* Pill shape */
+    cursor: pointer;
+    transition: transform 0.2s, background-color 0.2s;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+.btn-send-story:hover {
+    transform: scale(1.05);
+    background-color: var(--color-btn-hover);
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+    .stories-layout {
+        grid-template-columns: 1fr; /* Stack on mobile */
+    }
+    
+    .stories-image-container {
+        transform: rotate(0deg);
+        margin-top: 20px;
+    }
+
+    .pizzeria-title {
+        font-size: 3rem;
+    }
+}
+
+footer {
+    background-color: var(--color-teal);
+    padding: 20px 0;
+    text-align: center;
+    color: #ffffff;
+    font-weight: bold;
+}

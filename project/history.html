@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Ezequiel Jimenez">
+    <meta name="description" content="This page tells the story of the Pizza in Argentina and the inmigrants heritage">       
+    <title>Argentina Pizza Tour - History</title>  
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sancreek&family=Sansita:ital,wght@0,400;0,700;0,800;0,900;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/home.css">
+    <link rel="stylesheet" href="styles/history.css">
+    <script src="script/history.js" defer></script>
+</head>
+<body>
+
+    <header class="gold-border-bottom">
+        <div class="container header-content">
+            <div class="logo-container">
+                <img src="images/logo-nav.jpg" alt="Argentina Pizza Tour Logo" loading="lazy">
+                <span style="font-family: 'Sancreek', cursive; font-size: 2rem; color: #fff; vertical-align: middle; margin-left: 10px;"></span>
+            </div>
+            
+            <button class="menu-toggle" aria-label="Toggle navigation">
+                ☰
+            </button>
+
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="tour.html">Tours</a></li>
+                    <li><a href="pizzeria.html">Pizzeria</a></li>
+                    <li><a href="history.html" class="active-link">History</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+
+    <section class="history-header">
+        <h1 class="history-title">History</h1>
+        <p class="history-subtitle">The history of pizza in Argentina</p>
+    </section>
+
+
+    <section class="history-gallery-section gold-border-top gold-border-bottom">
+    
+            <div class="gallery-display">
+                <img id="history-main-img" src="images/oldCuarteta.jpg" alt="Vintage photo of Buenos Aires" loading="lazy">
+                <p id="history-caption" class="caption">Old times in Avenida Corrientes</p>
+            </div>
+            
+<!-- Interactive  Grid s!  -->
+            <div class="history-thumbnails" id="history-thumbnails">
+                <!-- JS will be put imags right  here -->
+            </div>
+        </div>
+    </section>
+
+
+    <main class="history-content-section">
+        <div class="container content-layout">
+            <div class="history-text">
+                <h2 class="section-heading">A beautiful culture is enriched by its visitors from abroad: Italian immigrants and their children</h2>
+                <div class="text-block">
+                    <p>
+                        The story begins in the late 19th and early 20th centuries, when massive waves of Italian immigrants arrived at the port of La Boca. They brought with them their recipes, their kneading techniques, and their dreams. But ingredients were different here, and so was the clientele.
+                    </p>
+                    <p>
+                        To satisfy the hunger of workers after long days, the pizza became thicker, cheesier, and more caloric. This gave birth to the "Media Masa" (half-dough), a sponge-like base capable of holding an enormous amount of mozzarella.
+                    </p>
+                    <p>
+                        Legends like "Güerrin" or "Las Cuartetas" opened their doors in the 1930s and haven't closed since. The "Fainá", a Genoese chickpea flatbread, was introduced to be eaten on top of the pizza, creating the famous "Pizza a caballo" (Pizza on horseback).
+                    </p>
+                </div>
+            </div>
+
+  
+            <div class="history-image-wrapper">
+                <img src="images/italians.jpg" alt="Italian immigrants in Buenos Aires" loading="lazy">
+                <h6 class="credits" >Italian family at the opening of their own pizzería. </h6>
+                <h6 class="credits" >Credits to Archivo General de la Nación. </h6>
+            </div>
+        </div>
+    </main>
+
+
+    <footer>
+        <div class="container">
+            <p>ARGENTINA PIZZA TOUR - Save your culture by sharing it</p>
+
+            <div class="footer-meta">
+                <p>&copy;<span id="currentyear"></span> Ezequiel Jimenez ⏰ Buenos Aires</p>
+                <p>Last Modification: <span id="lastModified"></span></p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

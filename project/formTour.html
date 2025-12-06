@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Ezequiel Jimenez">
+    <meta name="description" content="Form, alll the tours the consumer will choose">
+    <title>Argentina Pizza Tour - Book your Experience</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sancreek&family=Sansita:ital,wght@0,400;0,700;0,800;0,900;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/home.css">
+    <link rel="stylesheet" href="styles/form.css">
+    <script src="script/form.js" defer></script>
+</head>
+<body>
+
+
+    <header class="gold-border-bottom">
+        <div class="container header-content">
+            <div class="logo-container">
+                <img src="images/logo-nav.jpg" alt="Argentina Pizza Tour Logo" loading="lazy">
+                <span style="font-family: 'Sancreek', cursive; font-size: 2rem; color: #fff; vertical-align: middle; margin-left: 10px;"></span>
+            </div>
+            
+            <button class="menu-toggle" aria-label="Toggle navigation">☰</button>
+
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="tour.html">Tours</a></li>
+                    <li><a href="pizzeria.html">Pizzeria</a></li>
+                    <li><a href="history.html">History</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="form-section">
+        <div class="container">
+            <h1 class="form-title">Book your Adventure</h1>
+            <p class="form-intro">Ready to taste the best pizza in the world? Fill the form to save your spot.</p>
+
+  
+            <form id="bookingForm" method="get" action="reviewtour.xml" class="booking-form">
+                
+                <fieldset>
+                    <legend>Personal Information</legend>
+                    
+                    <div class="form-group">
+                        <label for="fullName">Full Name (Required)</label>
+                        <input type="text" id="fullName" name="fullName" required placeholder="Ex: Lionel Messi">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email Address (Required)</label>
+                        <input type="email" id="email" name="email" required placeholder="contact@example.com">
+                    </div>
+
+
+                    <div class="form-group">
+                        <label for="province">Where are you visiting from?</label>
+                        <select id="province" name="province">
+                            <option value="" disabled selected>Select Origin...</option>
+                            <option value="Buenos Aires">Buenos Aires</option>
+                            <option value="International">International Tourist</option>
+
+                        </select>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Tour Details</legend>
+
+                    <div class="form-group">
+                        <label for="tourSelect">Select Tour</label>
+                        <select id="tourSelect" name="tourSelect" required>
+                            <option value="" disabled selected>Choose a tour...</option>
+                            <option value="Tour Avenida Corrientes">Tour Avenida Corrientes</option>
+                            <option value="Tour Plaza Libertad">Tour Plaza Libertad</option>
+                            <option value="Tour Av Cordoba">Tour Av Cordoba</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="tourDate">Preferred Date</label>
+                        <input type="date" id="tourDate" name="tourDate" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="pax">Number of Guests</label>
+                        <input type="number" id="pax" name="pax" min="1" max="10" value="1" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="dietary">Dietary Restrictions (Optional)</label>
+                        <textarea id="dietary" name="dietary" rows="2" placeholder="Ex: Vegetarian, Gluten Free..."></textarea>
+                    </div>
+                </fieldset>
+
+                <button type="submit" class="btn-submit">CONFIRM BOOKING</button>
+
+            </form>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>ARGENTINA PIZZA TOUR - Save your culture by sharing it</p>
+            <div class="footer-meta">
+                <p>&copy;<span id="currentyear"></span> Ezequiel Jimenez ⏰ Buenos Aires</p>
+                <p>Last Modification: <span id="lastModified"></span></p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
